@@ -7,8 +7,8 @@ It reads the matrix from the file, stores it in a **vector**, and calculates the
 
 ## Requirements
 
-- **C++14 or later** (the program was written using C++14).
-- A compiler that supports C++14 (e.g., **GCC 5+, Clang 3.4+, MSVC 2015+**).
+- **C++11 or later** (the program was written using C++14).
+- A compiler that supports C++11 (e.g., **GCC 4.8+, Clang 3.3+, MSVC 2013+**)
 - The files **"main.cpp"** and **"determinantN.hpp"** must be in the same directory.
 
 ## Usage

@@ -40,7 +40,7 @@ int main()
 
 	textFile.close();
 
-	std::cout << "Determinant: " << DeterminantN(N, mat).result();
+	std::cout << "Determinant: " << DeterminantN(N, mat).result() << '\n';
 	
 	return 0;
 }
