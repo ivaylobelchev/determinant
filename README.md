@@ -5,6 +5,11 @@
 This program computes the determinant of an **NxN matrix** from a text file.  
 It reads the matrix from the file, stores it in a **vector**, and calculates the determinant using the `DeterminantN` class.
 
+## Notes
+
+The method implemented here is a Laplace expansion of the determinant until it gets broken down to a 2x2 matrix, which gets calculated with the `|A| = ad - bc` formula.
+I chose NOT to use the more efficient Gaussian elimination algorithm, because it can cause round-off errors when implemented using floating-point numbers. One of the objectives of this solution was to be able to use floating-point numbers. The Laplace expansion algorithm has a O(n!) complexity, while the Gaussian elimination algorithm has a O(n^3) complexity.
+
 ## Requirements
 
 - **C++11 or later** (the program was written using C++14).
