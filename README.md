@@ -2,18 +2,13 @@
 
 ## Overview
 
-This program computes the determinant of an **NxN matrix** from a text file.  
+This program computes the determinant of an **NxN matrix** from a text file using Gaussian Elimination.
 It reads the matrix from the file, stores it in a **vector**, and calculates the determinant using the `DeterminantN` class.
-
-## Notes
-
-The method implemented here is a Laplace expansion of the determinant until it gets broken down to a 2x2 matrix, which gets calculated with the `|A| = ad - bc` formula.
-I chose NOT to use the more efficient Gaussian elimination algorithm, because it can cause round-off errors when implemented using floating-point numbers. One of the objectives of this solution was to be able to use floating-point numbers. The Laplace expansion algorithm has a O(n!) complexity, while the Gaussian elimination algorithm has a O(n^3) complexity.
 
 ## Requirements
 
 - **C++11 or later** (the program was written using C++14).
-- A compiler that supports C++11 (e.g., **GCC 4.9+, Clang 3.3+, MSVC 2015+**)
+- A compiler that supports C++11 (e.g., **GCC 4.9+, Clang 3.4+, MSVC 2015+**)
 
 ### Files
 
@@ -22,14 +17,14 @@ Ensure the following files are in the same directory:
 - `main.cpp`
 - `readFromFile.hpp`
 - `readFromFile.cpp`
-- `determinantN.hpp`
-- `determinantN.cpp`
+- `determinantGauss.hpp`
+- `determinantGauss.cpp`
 
 ## Usage
 
 1. **Compile the program**:
    ```sh
-   g++ -std=c++14 main.cpp readFromFile.cpp determinantN.cpp -o determinant_calculator
+   g++ -std=c++14 main.cpp readFromFile.cpp determinantGauss.cpp -o determinant_calculator
    ```
 2. **Run the program**:
    ```sh
@@ -61,7 +56,7 @@ test_data/det4.txt
 ### Output
 
 - The program prints the **determinant** of the given matrix.
-- It returns **0** on success or a **nonzero value** if an error occurs.
+- There may be inaccuracies, associated with rounding errors. The program uses **long double** for higher precision.
 
 ### Error Handling
 

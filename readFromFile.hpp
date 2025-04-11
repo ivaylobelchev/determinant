@@ -4,4 +4,4 @@
 #include <vector>
 #include <string>
 
-bool readFromFile(int&, std::vector<std::vector<double>>&);
+bool readFromFile(int&, std::vector<std::vector<long double>>&);

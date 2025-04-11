@@ -1,6 +1,6 @@
 #include "readFromFile.hpp"
 
-bool readFromFile(int& N, std::vector<std::vector<double>>& mat)
+bool readFromFile(int& N, std::vector<std::vector<long double>>& mat)
 {
 	// Prompt the user for the filename and read it.
 	std::string fileName;
